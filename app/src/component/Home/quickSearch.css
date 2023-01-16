@@ -1,0 +1,19 @@
+.image {
+  height: auto;
+  max-height: 600px;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+}
+
+#carName {
+  color: rgb(28, 111, 117);
+  font-family: fantasy;
+  font-weight: 100;
+  font-size: 1000;
+}
+
+button:hover {
+  transform: scale(1.09);
+  color: rgb(28, 111, 117);
+}

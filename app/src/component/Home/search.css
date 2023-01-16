@@ -1,0 +1,36 @@
+.search {
+  position: relative;
+  padding-top: auto;
+  background-color: var(--prrimary-color);
+  background-image: url("https://i.ibb.co/YDzmSj0/searchbkg.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: auto;
+  height: fit-content;
+  max-height: auto;
+  padding-bottom: 40px;
+  width: 100%;
+  overflow-y: visible;
+  z-index: 10;
+}
+
+.col {
+  margin: 50px 0;
+}
+
+.col > select {
+  color: var(--secondary-color);
+  background-color: var(--prrimary-color);
+}
+#dateForm {
+  color: aliceblue;
+  background-color: black;
+}
+.submit {
+  color: aliceblue;
+  text-decoration: none;
+}
+.search > button {
+  text-align: center;
+  margin-left: 48%;
+}

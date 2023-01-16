@@ -1,0 +1,74 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  --prrimary-color: #212121;
+  --secondary-color: #f7f9fb;
+  /* background-color: black; */
+}
+/* :root{
+    --prrimary-color: #f7f9fb;
+    --secondary-color: #212121;
+} */
+.dark-theme {
+  --prrimary-color: #212121;
+  --secondary-color: #f7f9fb;
+}
+.main {
+  min-height: 100vh;
+}
+.header {
+  padding-bottom: 70px;
+}
+
+.nav-link:hover {
+  color: aqua;
+}
+.nav-link::after {
+  color: white;
+}
+.header button {
+  color: rgb(12, 12, 12);
+  border: solid 2px rgb(12, 11, 12);
+}
+.navbar {
+  color: var(--secondary-color);
+  background-color: var(--prrimary-color);
+}
+
+.brandname {
+  font-family: serif;
+  text-align: center;
+  line-height: 2px;
+  margin: 0 18% 0 2%;
+}
+.navbar-nav {
+  margin: 0 18% 0 0;
+  line-height: 5px;
+}
+
+.nav-item a {
+  color: var(--secondary-color);
+}
+#logout {
+  padding: auto;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.navtext {
+  padding: auto;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.icons {
+  display: inline-flex;
+  color: var(--secondary-color);
+  list-style: none;
+  text-decoration: none;
+}
+
+.icons button {
+  padding: 0;
+}

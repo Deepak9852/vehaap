@@ -1,0 +1,96 @@
+import React, { Component } from "react";
+import Header from "../header";
+
+const url = "http://localhost:5000/api/auth/register";
+
+class Register extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      name: "deepak",
+      email: "deepak@gmail.com",
+      password: "12345",
+      phone: 79878879,
+    };
+  }
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  handleSubmit = () => {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.state),
+    }).then(this.props.history.push("/"));
+  };
+
+  render() {
+    return (
+      <>
+        <Header />
+        <div className="container">
+          <div className="panel panel-danger">
+            <div className="panel-heading">
+              <h3>Register</h3>
+            </div>
+            <div className="panel-body">
+              <div className="row">
+                <div className="form-group col-md-6">
+                  <label for="firstname">FirstName</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    className="form-control"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-group col-md-6">
+                  <label for="password">Password</label>
+                  <input
+                    type="text"
+                    name="password"
+                    className="form-control"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-group col-md-6">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    className="form-control"
+                    value={this.state.phone}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+              <button className="btn btn-success" onClick={this.handleSubmit}>
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
+
+export default Register;

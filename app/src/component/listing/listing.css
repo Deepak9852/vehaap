@@ -1,0 +1,12 @@
+.card {
+  width: 25%;
+  margin: 2%;
+  height: 330px;
+  box-shadow: 5px 10px 15px gray;
+  float: left;
+}
+
+.card > img {
+  height: 150px;
+  width: 100%;
+}
